@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IEE 380 Survey</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h2 style="font-family:Arial, Helvetica, sans-serif;">Instructions:
+            Click on the button however many times you want. When you are done, press the "Finish" to conclude.
+        </h2>
+        
+        <button id="button">Click!</button>
+
+        <br>
+        <br>
+        <br>
+
+        <button id="finish">Finish</button>
+
+        <p><span id="total"></span></p>
+        
+        <script type="text/javascript">
+            var count = 0;
+            var btn1 = document.getElementById("button");
+            var btn2 = document.getElementById("finish");
+            var disp = document.getElementById("total");
+
+            btn1.onclick = function () {
+                count++;
+            }
+
+            btn2.onclick = function () {
+                btn1.remove();
+                var result = "You pressed the button: " + count + " times. \nPlease copy just the number and paste it in the orginal survey";
+                disp.innerText = result;
+            }
+
+        </script>
+
+    </body>
+</html>
